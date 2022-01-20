@@ -1,8 +1,9 @@
 const exp = require('express');
 const app = exp();
 const session = require('express-session');
+const cors = require('cors')
 
-app.use(exp.urlencoded({extended: false}));
+app.use(exp.urlencoded({extended: true}));
 app.use(exp.json());
 app.use(session({
     secret: 'iniPasswordKey',

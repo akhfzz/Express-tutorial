@@ -1,6 +1,5 @@
 const app = require('./routes/api/views-mongo');
 const db = require('./routes/api/database-config')
-require('dotenv').config({ path: '../../config.env' });
 
 db.connectToServer(function(err){
     if(err){
