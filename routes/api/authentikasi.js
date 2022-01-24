@@ -1,4 +1,4 @@
-const mongo = require("./database-config");
+const mongo = require("./Mongodb-config");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 

@@ -1,10 +1,17 @@
-const app = require('./routes/api/views-mongo');
-const db = require('./routes/api/database-config')
+const app = require('./routes/api/views-mysql');
+const Mongo = require('./routes/api/Mongodb-config');
+const mysql = require('./routes/api/Mysql-config')
 
-db.connectToServer(function(err){
+Mongo.connectToServer(function(err){
     if(err){
         console.log("Maaf tidak bisa terkoneksi");
         process.exit()
+    }
+})
+
+mysql.connect(function(err){
+    if(err){
+        console.log("Error koneksi ke mysql")
     }
 })
 

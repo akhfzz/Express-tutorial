@@ -1,5 +1,5 @@
 const app = require('./views');
-const mongo = require('./database-config');
+const mongo = require('./Mongodb-config');
 const uuid = require('uuid');
 const { ObjectId } = require('mongodb');
 const bcrypt = require("bcrypt");
@@ -102,4 +102,4 @@ app.delete("/mongo/delete/:id", (req, res) => {
         })
 })
 
-module.exports = app
+module.exports = app;
